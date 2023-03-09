@@ -7,6 +7,7 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<flow name="STUDENT" doc:id="5f233f2a-f7de-4dad-8f0f-9718d0b2abb7" >
+		<logger level="INFO" doc:name="FLOW START" doc:id="54576655-d03f-496e-ab56-a15bd448e585" message='#["Flow Start::" ++ now()]'/>
 		<set-variable value="#[attributes.localAddress]" doc:name="Set Variable" doc:id="adb9881d-cf3d-4109-a248-84f160a8f4d7" variableName="LocalIP"/>
 		<db:select doc:name="SELECT_STUDENT_DATA" doc:id="a9f8442b-c5dd-4f1e-8ce0-65c4979ef131" config-ref="Main_DATABASE_CONFIG">
 			<db:sql ><![CDATA[SELECT * FROM tb_student]]></db:sql>
