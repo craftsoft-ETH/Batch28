@@ -1,0 +1,30 @@
+%dw 2.0
+
+type auto_5f233f2a_f7de_4dad_8f0f_9718d0b2abb7_Input_Attributes = {|
+  clientCertificate?: {|
+    publicKey?: {|  |}, 
+    "type"?: String, 
+    encoded?: Binary
+  |}, 
+  headers: {|
+    C_ID?: String, 
+    C_Secret?: String
+  |}, 
+  listenerPath: String, 
+  method: String, 
+  queryParams: {|
+    Studentname?: String, 
+    Student_ID?: Number, 
+    Grade?: "12A" | "12B" | "12C"
+  |}, 
+  queryString: String, 
+  relativePath: String, 
+  remoteAddress: String, 
+  requestPath: String, 
+  requestUri: String, 
+  scheme: String, 
+  uriParams: {|  |}, 
+  version: String, 
+  localAddress: String
+|}
+
